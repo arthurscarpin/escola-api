@@ -4,6 +4,6 @@ def estudantes(request):
     if request.method == 'GET':
         estudante = {
             'id': '1',
-            'nome': 'Arthur'
+            'nome': 'Arthur' 
         }
         return JsonResponse(estudante)
