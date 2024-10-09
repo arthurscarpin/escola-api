@@ -10,6 +10,35 @@ Essa API RESTful de uma escola foi desenvolvida para colocar em prática os conh
 </div>
 
 ## 🎒 API RESTful
+- Interface Django Rest Framework:
+
+![interface-django-api](https://github.com/user-attachments/assets/c4583393-8f81-48de-a797-d5066d84c0e7)
+
+- Interface Django Admin:
+
+![interface-django-admin](https://github.com/user-attachments/assets/4fa871a2-3f85-4be2-9d92-af24412569f5)
+
+## 🖥️ Documentação
+
+Essa API foi documentada através do **Swagger** e **Redoc**.
+
+- Documentação Swagger:
+
+![api-escola-swagger](https://github.com/user-attachments/assets/ffac2a2a-843d-40b5-a5a1-3a850ad266dc)
+
+```
+# Url:
+<localhost>/swagger
+```
+
+- Documentação Redoc:
+
+![api-escola-redoc](https://github.com/user-attachments/assets/f10282f3-01d4-4b58-9ab6-36c010b67361)
+
+```
+# Url:
+<localhost>/redoc
+```
 
 ## 🛠️ Como executar?
 Para executar esse projeto é necessário seguir o passo a passo a seguir:
@@ -51,18 +80,7 @@ python .\manage.py runserver
 ```
 
 ## 📝 Testes
-
-Para testar essa API, você poderá utilizar diretamente a interface do Django Rest Framework:
-
-- Interface Django Rest Framework:
-
-![interface-django-api](https://github.com/user-attachments/assets/c4583393-8f81-48de-a797-d5066d84c0e7)
-
-**Obs:** É possível testar o CRUD da aplicação através do Django Admin:
-
-- Interface Django Admin:
-
-![interface-django-admin](https://github.com/user-attachments/assets/4fa871a2-3f85-4be2-9d92-af24412569f5)
+Para testar essa API, você poderá utilizar o **Postman**:
 
 Esse link contém um totorial de como usar a ferramenta: [Tutorial Postman](https://gist.github.com/zec4o/f4a600fafa50003e315fa3fcfd9c1e4a)
 
