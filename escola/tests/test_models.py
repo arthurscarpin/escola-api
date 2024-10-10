@@ -7,11 +7,11 @@ class ModelEstudanteTestCase(TestCase):
 
     def setUp(self):
         self.estudante = Estudante.objects.create(
-            nome = 'Teste de Modelo',
-            email = 'testedemodelo@email.com',
-            cpf = '05806135004',
-            data_nascimento = '2000-02-02',
-            celular = '86 99999-9999'
+            nome='Teste de Modelo',
+            email='testedemodelo@email.com',
+            cpf='05806135004',
+            data_nascimento='2000-02-02',
+            celular='86 99999-9999'
         )
 
     def test_verifica_atributos(self):
@@ -25,9 +25,9 @@ class ModelEstudanteTestCase(TestCase):
 class ModelCursoTestCase(TestCase):
     def setUp(self):
         self.curso = Curso.objects.create(
-            codigo = 'POO',
-            descricao = 'Curso de Python orientado a objetos',
-            nivel = 'B'
+            codigo='POO',
+            descricao='Curso de Python orientado a objetos',
+            nivel='B'
         )
 
     def test_verifica_atributos(self):
@@ -40,21 +40,21 @@ class ModelCursoTestCase(TestCase):
 class ModelMatriculaTestCase(TestCase):
     def setUp(self):
         self.estudante_matricula = Estudante.objects.create(
-            nome = 'Teste de Modelo',
-            email = 'testedemodelo@email.com',
-            cpf = '05806135004',
-            data_nascimento = '2000-02-02',
-            celular = '86 99999-9999'
+            nome='Teste de Modelo',
+            email='testedemodelo@email.com',
+            cpf='05806135004',
+            data_nascimento='2000-02-02',
+            celular='86 99999-9999'
         )
         self.curso_matricula = Curso.objects.create(
-            codigo = 'POO',
-            descricao = 'Curso de Python orientado a objetos',
-            nivel = 'B'
+            codigo='POO',
+            descricao='Curso de Python orientado a objetos',
+            nivel='B'
         )
         self.matricula = Matricula.objects.create(
-            estudante = self.estudante_matricula,
-            curso = self.curso_matricula,
-            periodo = 'M'
+            estudante=self.estudante_matricula,
+            curso=self.curso_matricula,
+            periodo='M'
         )
 
     def test_verifica_atributos(self):
