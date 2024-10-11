@@ -6,27 +6,15 @@ from escola.models import Estudante, Curso, Matricula
 from escola.serializers import MatriculaSerializer
 
 class MatriculasTestCase(APITestCase):
+    fixtures = ['prototipo_banco.json']
+
     def setUp(self):
-        self.usuario = User.objects.create_superuser(username='admin', password='admin')
+        self.usuario = User.objects.create_superuser(username='admin')
         self.url = reverse('Matriculas-list')
         self.client.force_authenticate(user=self.usuario)
-        self.estudante_01 = Estudante.objects.create(
-            nome='Teste estudante um',
-            email='testeestudante01@email.com',
-            cpf='40093565020',
-            data_nascimento='2024-01-01',
-            celular='86 99999-9999'
-        )
-        self.curso_01 = Curso.objects.create(
-            codigo='POO',
-            descricao='Curso de python orientado a objetos',
-            nivel='B'
-        )
-        self.matricula_01 = Matricula.objects.create(
-            estudante=self.estudante_01,
-            curso=self.curso_01,
-            periodo='M'
-        )
+        self.estudante_01 = Estudante.objects.get(pk=1)
+        self.curso_01 = Curso.objects.get(pk=1)
+        self.matricula_01 = Matricula.objects.get(pk=1)
 
     def test_requisicao_get_para_listar_matriculas(self):
         '''Teste de requisição GET'''

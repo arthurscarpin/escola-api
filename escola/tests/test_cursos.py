@@ -6,20 +6,14 @@ from escola.models import Curso
 from escola.serializers import CursoSerializer
 
 class CursosTestCase(APITestCase):
+    fixtures = ['prototipo_banco.json']
+
     def setUp(self):
-        self.usuario = User.objects.create_superuser(username='admin', password='admin')
+        self.usuario = User.objects.create_superuser(username='admin')
         self.url = reverse('Cursos-list')
         self.client.force_authenticate(user=self.usuario)
-        self.curso_01 = Curso.objects.create(
-            codigo='POO',
-            descricao='Curso de python orientado a objetos',
-            nivel='B'
-        )
-        self.curso_02 = Curso.objects.create(
-            codigo='TSR',
-            descricao='Curso de Typescript com React',
-            nivel='I'
-        )
+        self.curso_01 = Curso.objects.get(pk=1)
+        self.curso_02 = Curso.objects.get(pk=2)
 
     def test_requisicao_get_para_listar_cursos(self):
         '''Teste de requisição GET'''
