@@ -80,9 +80,24 @@ python .\manage.py runserver
 ```
 
 ## 📝 Testes
-Para testar essa API, você poderá utilizar o **Postman**:
 
-Esse link contém um totorial de como usar a ferramenta: [Tutorial Postman](https://gist.github.com/zec4o/f4a600fafa50003e315fa3fcfd9c1e4a)
+- **Testes automatizados**
+É possível realizar os teste automatizados desta API, sendo eles os testes unitários e os testes de integração que se encontram no diretório **/tests**
+
+Para executar esses testes é necessário executar o comando a seguir:
+```
+python manage.py test
+```
+
+- **Testes manuais**
+
+Para realizar os testes manuais dessa API, você poderá utilizar o **Postman** ou o **Thunder Client**:
+
+Os links abaixo contém um suporte de como utilizar as ferramentas mencionadas: 
+
+[Tutorial Postman](https://gist.github.com/zec4o/f4a600fafa50003e315fa3fcfd9c1e4a)
+
+[Thunder Client](https://github.com/thunderclient/thunder-client-support)
 
 ## 📁 Documentações de referência
 [Documentação Django](https://www.djangoproject.com/)
